@@ -6,77 +6,58 @@
     <title>Positioning Example</title>
     <style>
         body {
-            width: 500px;
-            margin: 0 auto;
+            font-family: sans-serif;
+            margin: 0;
         }
 
-        p {
-            background: aqua;
-            border: 3px solid blue;
+        header {
+            background: purple;
+            height: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+        }
+
+        article {
             padding: 10px;
             margin: 10px;
+            background: aqua;
         }
-
-        span {
-            background: red;
-            border: 1px solid black;
-        }
-
-        .positioned {
-
-            /* El simple hecho de establecer la propiedad position al valor relative, no cambia nada en absoluto, para apreciar los cambios tenemos que utilizar top, bottom, left y rigth */
-
-            position: fixed;
-            background: yellow;
-            top: 3px;
-            left: 3px;
-            width: 100%;
-            color: black;
-            text-align: center;
-        }
-
     </style>
 </head>
 <body>
-    <!-- Positioning (Posicionamiento): Te permite sacar a los elementos HTML 
-     del flujo normal de renderizado (construccion) y hacerlos que se comporten de forma diferente, por ejemplo, situar un elemento sobre otro o que siempre permanezca en el mismo sitio dentro del viewport (area del navegador donde se renderiza el documento web)
+    <!-- Flex Box: Es una tecnica de diseño uni dimensional, para agrupar los elementos HTML en filas y columnas. Los elementos flexibles (flex items) expanden para rellenar el espacio adicional o se contraen para encajar en espacios mas pequeños  -->
+    
+    <!-- ¿Por que flexbox? El layout css flexbox nos permite lo siguiente:
      
-     A continuacion veremos, con ejemplos, los diferentes valores que puede tomar la propiedad position y como usarlos
-     
-     Valores de position:
-     
-     1- static: Valor por defecto de posicionar los elementos dentro de la pagina web
-     2- relative: Los elementos HTML posicionados utilizando este valor permanecen en el flujo normal, excepto si se aplica el posicionamiento absoluto (fixed/sticky) que saca a los elementos fuera del flujo normal y los situa en capas separadas
-     3- Utilizando las propiedades top, bottom, left y right, que daran un valor difente en el posicionamiento 
-     4- Establecer el contexto de posicionamiento de un elemento posicionado, tomando en consideracion la posicion de un ancestro (padre, etc.)-->
+    1- Verticalmente centrar un bloque de contenido dentro de su padre
+    2- Hace que todos los hijos de un elemento contenedor tomen una cantidad de espacio igual del espacio disponible en ancho y altura, independientemente de cuanto ancho y altura quede
+    3- Hace que todas las columnas de un diseño de multiples columnas adopte la misma altura aunque cada tengan contenidos diferentes -->
 
-     <h1>Ejemplo de Absolute Positioning</h1>
-
-     <p>Soy un elemento a nivel de bloque basico. Mis elementos de bloque adyacentes se ubican en nuevas lineas por debajo de la mia</p>
-
-     <nav class="positioned">
-        <h1>Barra de Navegación</h1>
-     </nav>
-
-     <p>
-        Estamos separados por nuestros margenes. Debido a los margenes colapsados, estamos separados por el ancho de uno de nuestros margenes y no por ambos
-     </p>
-
-     <p>
-        Los elementos inline <span>como este</span> y <span>este otro</span> se ubican en la misma linea si hay espacio en la misma linea. El sobrante de los elementos inline <span>se atrapa en una nueva linea si es posible - como esta conteniendo texto</span>, o solamente va en una nueva linea de lo contrario, como seria con la imagen siguiente: 
-        <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" alt="Imagen libre">
-
-     </p>
-
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, facere quos voluptates quas nemo tempore repudiandae molestiae recusandae velit veritatis! Tempora itaque laboriosam commodi iusto omnis animi illum ducimus in!</p>
-     <p>Eveniet earum soluta ad ullam sequi totam sed dolore culpa, aut quis necessitatibus animi dolorum cupiditate repellendus quia natus voluptates eius ea nobis perspiciatis? Quaerat inventore quis nesciunt id perspiciatis.</p>
-     <p>Error saepe amet dolorem fugit necessitatibus sit, obcaecati iste perspiciatis est molestias quia, nemo ratione quae omnis, sequi labore delectus aliquam aperiam esse recusandae deserunt vitae. Veniam eaque repudiandae ducimus?</p>
-     <p>Dolore sed illo quae soluta. Fugit expedita dignissimos natus, alias unde dolorem cupiditate, illo fuga facilis libero minus. Nemo dignissimos autem quasi, optio sapiente facilis culpa recusandae labore reiciendis. Aperiam?</p>
-     <p>Officiis, necessitatibus? Id quos atque quidem eius animi ab dicta cumque eum repudiandae nobis laborum voluptatibus magnam consequuntur saepe deserunt, incidunt et! Maxime soluta expedita vel eius dolorum fugit sunt.</p>
-     <p>Eaque laborum repellendus voluptatibus dicta facere suscipit placeat? Consequatur praesentium, exercitationem obcaecati, deserunt nostrum facere modi tenetur pariatur facilis, quos explicabo. Dolores sit commodi cumque recusandae, facilis in voluptatem quasi!</p>
-     <p>In, culpa. Eum molestiae quos amet sapiente magni similique at magnam asperiores ipsa provident quidem necessitatibus nam veniam vel nostrum in earum illo, tempora hic dolorem id culpa itaque maiores.</p>
-     <p>Officia sint, optio veritatis hic aliquid libero laboriosam incidunt nostrum possimus animi quidem eaque distinctio numquam illum unde recusandae fuga odio ad velit necessitatibus dolorum voluptatibus saepe? Exercitationem, error ab.</p>
-     <p>Libero deleniti repudiandae doloremque numquam, possimus voluptate iste labore nam tempore sequi adipisci cupiditate aut eligendi eos ut nisi ratione aspernatur accusamus itaque odit quam voluptatum. Quos nulla enim perferendis!</p>
-     <p>Nobis, alias velit! Autem quam corporis aperiam cupiditate repudiandae consequuntur eaque dicta. Voluptatibus, maxime adipisci libero deserunt fuga voluptates soluta pariatur porro id magni consectetur fugit quo laboriosam nemo molestiae.</p>
+    <header>
+        <h1>Flexbox ejemplo</h1>
+    </header>
+    <section>
+        <article>
+            <h2>Primer Articulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo enim atque recusandae quod illum. Totam quo consequuntur maiores et voluptates in sint molestiae accusamus. Eligendi, libero magni! Et, suscipit!</p>
+        </article>
+        <article>
+            <h2>Segundo Articulo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iusto dolor animi? Odio possimus voluptate ut non pariatur explicabo obcaecati debitis, molestiae, sed tempore perferendis esse ratione vel deserunt. Iusto!</p>
+        </article>
+        <article>
+            <h2>Tercer Articulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed suscipit soluta nulla exercitationem eaque labore praesentium, est et necessitatibus explicabo, commodi eius magnam ex veritatis minus blanditiis reprehenderit! Sapiente, tenetur!</p>
+        </article>
+    </section>
 </body>
 </html>
