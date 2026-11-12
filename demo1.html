@@ -22,6 +22,11 @@
             border: 1px solid black;
         }
 
+        .positioned {
+            position: static;
+            background: yellow;
+        }
+
     </style>
 </head>
 <body>
@@ -41,7 +46,7 @@
 
      <p>Soy un elemento a nivel de bloque basico. Mis elementos de bloque adyacentes se ubican en nuevas lineas por debajo de la mia</p>
 
-     <p>Por defecto hacemos un span del 100% del ancho del elemento padre, y nuestra altura es tan alta como el contenido de nuestros elementos hijos,
+     <p class="positioned">Por defecto hacemos un span del 100% del ancho del elemento padre, y nuestra altura es tan alta como el contenido de nuestros elementos hijos,
      Nuestro ancho total y altura es nuesto contenido + padding + border por 
      el ancho y por el alto
      </p>
