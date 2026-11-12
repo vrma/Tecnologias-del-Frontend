@@ -23,8 +23,13 @@
         }
 
         .positioned {
-            position: static;
+
+            /* El simple hecho de establecer la propiedad position al valor relative, no cambia nada en absoluto, para apreciar los cambios tenemos que utilizar top, bottom, left y rigth */
+
+            position: relative;
             background: yellow;
+            top: 30px;
+            left: 30px;
         }
 
     </style>
@@ -42,7 +47,7 @@
      3- Utilizando las propiedades top, bottom, left y right, que daran un valor difente en el posicionamiento 
      4- Establecer el contexto de posicionamiento de un elemento posicionado, tomando en consideracion la posicion de un ancestro (padre, etc.)-->
 
-     <h1>Flujo basico del documento</h1>
+     <h1>Ejemplo de Relative Positioning</h1>
 
      <p>Soy un elemento a nivel de bloque basico. Mis elementos de bloque adyacentes se ubican en nuevas lineas por debajo de la mia</p>
 
