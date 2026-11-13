@@ -8,49 +8,41 @@
     <style>
         body {
             font-family: sans-serif;
-            width: 90%;
-            max-width: 960px;
-            margin: 10px auto;
+            margin: 0;
         }
 
-        div {
-            height: 100px;
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            /* justify-content: space-between; */
-            justify-content: space-around;
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
         }
-
-        button {
-            font-size: 18px;
-            line-height: 1.5;
-            width: 15%;
-        }
-
-        /* button:first-child {
-            align-self: flex-end;
-        } */
-
-        /* button:first-child {
-            order: 1;
-        } */
-
-        button:last-child {
-            order: -1;
-        }
-
     </style>
 </head>
 
 <body>
-    <div>
-        <button>Smile</button>
-        <button>Laugh</button>
-        <button>Wink</button>
-        <button>Shrug</button>
-        <button>Blush</button>
-    </div>
+    <section>
+        <article>
+            <h2>First article</h2>
+            <p>Content ...</p>
+        </article>
+        <article>
+            <h2>Second article</h2>
+            <p>Content ..</p>
+        </article>
+        <article>
+            <div>
+                <button>Smile</button>
+            </div>
+            <div>
+                <button>Laugh</button>
+            </div>
+            <div>
+                <button>Wink</button>
+                <button>Shrug</button>
+                <button>Blush</button>
+            </div>
+        </article>
+    </section>
 </body>
 
 </html>
