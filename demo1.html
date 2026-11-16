@@ -17,12 +17,14 @@
             border: 2px solid rgb(79 185 227);
         }
 
-        /* Creando grid flexibles utilizando unidades fr, es decir,
-        indicando cuantas fracciones del espacio disponible se requiere para cada columna. Por ejemplo a continuacion queremos que cada columna tome una fraccion del espacio disponible */
+        /* Que la primera columna ocupe 2 fracciones del espacio disponible */
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
         }
+
+
     </style>
 </head>
 
