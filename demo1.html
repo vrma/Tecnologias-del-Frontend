@@ -4,44 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Layout</title>
+    <title>Line-based placement</title>
     <style>
-        body {
-            font-family: sans-serif;
-        }
-
-        .container > div {
-            border-radius: 5px;
-            padding: 10px;
-            background-color: rgb(207 232 220);
-            border: 2px solid rgb(79 185 227);
-        }
-
-        /* Agregar el contenedor tantas columnas como sea posible */
         .container {
+            font-family: sans-serif;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            grid-auto-rows: minmax(50px, auto);
+            grid-template-columns: 1fr 3fr;
             gap: 20px;
         }
+        
+        header, footer {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rebeccapurple;
+            color: whitesmoke;
+            text-align: center;
+        }
 
+        aside {
+            border-right: 1px solid rebeccapurple;
+        }
 
+        header {
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
+
+        main {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        aside {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        footer {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+    
     </style>
 </head>
-
 <body>
     <div class="container">
-        <div>One
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odio ea dolorum. Pariatur iste, dolore nostrum enim, quo voluptatum exercitationem esse porro ipsam, libero aliquid. Unde a provident ipsa rerum!</p>
-        </div>
-        <div>Two</div>
-        <div>Three</div>
-        <div>Four
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et molestiae excepturi, quidem doloribus saepe neque, iure, id soluta eaque maiores aut architecto nisi ad quas modi in quod! Assumenda, facere!</p>
-        </div>
-        <div>Five</div>
-        <div>Six</div>
-        <div>Seven</div>
+        <header>Header</header>
+        <main>
+            <h1>Main</h1>
+            <p>Main content</p>
+        </main>
+        <aside>
+            <h2>Aside</h2>
+            <p>Related content</p>
+        </aside>
+        <footer>footer</footer>
     </div>
 </body>
 
