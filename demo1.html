@@ -17,12 +17,11 @@
             border: 2px solid rgb(79 185 227);
         }
 
-        /* Dar un tamaño a las filas para que no sea implicito, de 100px 
-        en este caso */
+        /* Agregar el contenedor tantas columnas como sea posible */
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: minmax(100px, auto);
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-auto-rows: minmax(50px, auto);
             gap: 20px;
         }
 
