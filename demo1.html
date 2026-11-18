@@ -38,6 +38,15 @@
 
         main {
             grid-area: content;
+            display: grid;
+            grid-template-rows: 4fr 3fr 3fr;
+            gap: inherit;
+        }
+
+        article {
+            padding: 10px;
+            border: 2px solid rebeccapurple;
+            border-radius: 5px;
         }
 
         aside {
@@ -54,8 +63,18 @@
     <div class="container">
         <header>Header</header>
         <main>
-            <h1>Main</h1>
-            <p>Main content</p>
+            <article>
+                <h1>Article One</h1>
+                <p>Content ...</p>
+            </article>
+            <article>
+                <h1>Article Two</h1>
+                <p>Content ...</p>
+            </article>
+            <article>
+                <h1>Article Three</h1>
+                <p>Content ...</p>
+            </article>
         </main>
         <aside>
             <h2>Aside</h2>
