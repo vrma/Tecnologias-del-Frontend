@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+   <h1>Manejo del DOM (Document Object Model) con el lenguaje JavaScript</h1> 
+
+   <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at voluptatem, fugiat dolorem atque possimus, nemo cum libero ratione aperiam, corrupti pariatur et odit beatae. Quo sint enim eaque magnam.</p>
+
+   <button id="btn1">Cambiar Estilo del Parrafo</button>
+    <script>
+        // Codigo del lenguaje JavaScript
+
+        /* El siguiente codigo es un metodo, un menejador de evento click
+        , que un evento es algo que ocurre en el navegador (minimizar una
+        ventana, maximizarla, hacer click en alguna parte, etc) y que le hes notificado a la aplicacion y si tiene un manejador de eventos respondera al mismo */
+
+        /*
+            document: Es el objeto documento, que tiene propiedades y 
+            metodos.
+
+            querySelector(): Es un metodo del objeto documento (document),
+            que nos permite utilizar los mismos selectores que ya, 
+            se supone, que dominamos del estudio de CSS
+
+            addEventListener(): Es tambien un metodo que se utiliza, para
+            agregar codigo a un elemento HTML seleccionado, mediante el metodo
+            querySelector, que recibe como primer parametro el evento al cual 
+            va a responder, click en este caso, y como segundo parametro recibe
+            una funcion de callback (Tipo de funcion que no se llama, no se
+            invoca, directamente sino en respuesta a un evento, se puede 
+            utilizar una funcion externa o una fat arrow (funcion de flecha
+            gorda como las lambdas de Java))
+        */
+
+        document.querySelector("#btn1").addEventListener("click", () => {
+            alert("Estoy respondiendo al evento click");
+            // console.log("Se ha hecho click en el boton");
+        });
+    </script>
+</body>
+</html>
+
